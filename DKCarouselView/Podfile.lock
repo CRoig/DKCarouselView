@@ -1,36 +1,38 @@
 PODS:
   - DKCarouselView (1.4.12):
-    - SDWebImage/GIF (~> 4.1)
+    - SDWebImageFLPlugin (~> 0.3)
   - FLAnimatedImage (1.0.12)
-  - SDWebImage/Core (4.4.6)
-  - SDWebImage/GIF (4.4.6):
-    - FLAnimatedImage (~> 1.0)
-    - SDWebImage/Core
+  - SDWebImage/Core (5.0.6)
+  - SDWebImageFLPlugin (0.3.0):
+    - FLAnimatedImage (>= 1.0.11)
+    - SDWebImage/Core (~> 5.0)
 
 DEPENDENCIES:
-  - DKCarouselView (from `https://github.com/CRoig/DKCarouselView`, branch `develop`)
-  - SDWebImage/GIF (~> 4.4.6)
+  - DKCarouselView (from `https://github.com/CRoig/DKCarouselView.git`, branch `develop`)
+  - SDWebImageFLPlugin
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - FLAnimatedImage
     - SDWebImage
+    - SDWebImageFLPlugin
 
 EXTERNAL SOURCES:
   DKCarouselView:
     :branch: develop
-    :git: https://github.com/CRoig/DKCarouselView
+    :git: https://github.com/CRoig/DKCarouselView.git
 
 CHECKOUT OPTIONS:
   DKCarouselView:
-    :commit: 6132601d4ba317eff19b6aa4ca0b9488ba0d360c
-    :git: https://github.com/CRoig/DKCarouselView
+    :commit: 8e5d46126b72144b4b42da32ca7a3b444782acda
+    :git: https://github.com/CRoig/DKCarouselView.git
 
 SPEC CHECKSUMS:
-  DKCarouselView: 1009b17b09a1c335cb8b6f810a3716a2c96a91fd
+  DKCarouselView: 01ff599d1e94792401260ad03756cd84ad323fad
   FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
-  SDWebImage: 3f3f0c02f09798048c47a5ed0a13f17b063572d8
+  SDWebImage: 920f1a2ff1ca8296ad34f6e0510a1ef1d70ac965
+  SDWebImageFLPlugin: cf3f4ae49f249dd785129346fd61bbc8433a88cf
 
-PODFILE CHECKSUM: da0c06f571e3931b94b7ce73cd068c9a9a201111
+PODFILE CHECKSUM: cf65288eb646ec4b9588aac468439a7ac9bf348c
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.7.3

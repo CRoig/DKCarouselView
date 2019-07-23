@@ -14,7 +14,7 @@
     "ios": "9.0"
   },
   "source": {
-    "git": "https://github.com/CRoig/DKCarouselView.git",
+    "git": "https://github.com/zhangao0086/DKCarouselView.git",
     "branch": "develop"
   },
   "source_files": "DKCarouselView/DKCarouselView/DKCarouselView/*.{h,m}",
@@ -24,8 +24,8 @@
   ],
   "requires_arc": true,
   "dependencies": {
-    "SDWebImage/GIF": [
-      "~> 4.1"
+    "SDWebImageFLPlugin": [
+      "~> 0.3"
     ]
   },
   "pod_target_xcconfig": {

@@ -246,23 +246,21 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
-				"${SRCROOT}/../Pods/Target Support Files/Pods-DKCarouselViewDemo/Pods-DKCarouselViewDemo-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-DKCarouselViewDemo/Pods-DKCarouselViewDemo-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/FLAnimatedImage/FLAnimatedImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImageFLPlugin/SDWebImageFLPlugin.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FLAnimatedImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImageFLPlugin.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-DKCarouselViewDemo/Pods-DKCarouselViewDemo-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DKCarouselViewDemo/Pods-DKCarouselViewDemo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		45372AEE186AF00908500F1F /* [CP] Check Pods Manifest.lock */ = {
