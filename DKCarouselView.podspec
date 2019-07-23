@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
   s.platform     = :ios, "9.0"
   s.source       = { :git => "https://github.com/zhangao0086/DKCarouselView.git", 
                      :branch => "develop" }
-  s.source_files  = "DKCarouselView/DKCarouselView/DKCarouselView/*.{h,m}"
+  s.source_files  = "DKCarouselView/DKCarouselView/*.{h,m}"
   s.frameworks = "Foundation", "UIKit"
   s.requires_arc = true
   s.dependency "SDWebImageFLPlugin", '~> 0.3'
