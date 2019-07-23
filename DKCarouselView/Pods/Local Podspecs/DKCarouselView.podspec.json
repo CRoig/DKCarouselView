@@ -17,7 +17,7 @@
     "git": "https://github.com/zhangao0086/DKCarouselView.git",
     "branch": "develop"
   },
-  "source_files": "DKCarouselView/DKCarouselView/DKCarouselView/*.{h,m}",
+  "source_files": "DKCarouselView/DKCarouselView/*.{h,m}",
   "frameworks": [
     "Foundation",
     "UIKit"
