@@ -8,11 +8,11 @@
 //
 
 #import "DKCarouselView.h"
-@import SDWebImageFLPlugin;
+#import "UIImageView+WebCache.h"
 
-typedef void(^DKCarouselViewTapBlock)(void);
+typedef void(^DKCarouselViewTapBlock)();
 
-@interface DKClickableImageView : FLAnimatedImageView
+@interface DKClickableImageView : UIImageView
 
 @property (nonatomic, assign) BOOL enable;
 @property (nonatomic, copy) DKCarouselViewTapBlock tapBlock;
@@ -21,46 +21,21 @@ typedef void(^DKCarouselViewTapBlock)(void);
 
 @implementation DKClickableImageView
 
-// -initWithImage: isn't documented as a designated initializer of UIImageView, but it actually seems to be.
-// Using -initWithImage: doesn't call any of the other designated initializers.
-- (instancetype)initWithImage:(UIImage *)image
-{
-    self = [super initWithImage:image];
-    if (self) {
-        [self customComonInit];
+- (instancetype)initWithFrame:(CGRect)frame {
+    if ((self = [super initWithFrame:frame])) {
+        [self commonInit];
     }
     return self;
 }
 
-// -initWithImage:highlightedImage: also isn't documented as a designated initializer of UIImageView, but it doesn't call any other designated initializers.
-- (instancetype)initWithImage:(UIImage *)image highlightedImage:(UIImage *)highlightedImage
-{
-    self = [super initWithImage:image highlightedImage:highlightedImage];
-    if (self) {
-        [self customComonInit];
+- (instancetype)initWithCoder:(NSCoder *)aDecoder {
+    if ((self = [super initWithCoder:aDecoder])) {
+        [self commonInit];
     }
     return self;
 }
 
-- (instancetype)initWithFrame:(CGRect)frame
-{
-    self = [super initWithFrame:frame];
-    if (self) {
-        [self customComonInit];
-    }
-    return self;
-}
-
-- (instancetype)initWithCoder:(NSCoder *)aDecoder
-{
-    self = [super initWithCoder:aDecoder];
-    if (self) {
-        [self customComonInit];
-    }
-    return self;
-}
-
-- (void)customComonInit {
+- (void)commonInit {
     self.userInteractionEnabled = YES;
     self.enable = YES;
     
@@ -106,7 +81,7 @@ typedef void(^DKCarouselViewTapBlock)(void);
 @property (nonatomic, weak) UIScrollView *scrollView;
 @property (nonatomic, copy) NSArray *items;
 @property (nonatomic, strong) NSMutableArray *carouselItemViews;
-@property (nonatomic, readwrite, weak) UIPageControl *pageControl;
+@property (nonatomic, weak) UIPageControl *pageControl;
 @property (nonatomic, assign) CGSize lastSize;
 
 @property (nonatomic, strong) NSTimer *autoPagingTimer;
@@ -150,12 +125,10 @@ typedef void(^DKCarouselViewTapBlock)(void);
     scrollView.scrollsToTop = NO;
     scrollView.delegate = self;
     
-    self.indicatorTintColor = [UIColor whiteColor];
-    self.indicatorTintColorUnselected = [UIColor lightGrayColor];
+    self.indicatorTintColor = [UIColor lightGrayColor];
     
     UIPageControl *pageControl = [UIPageControl new];
     pageControl.currentPageIndicatorTintColor = self.indicatorTintColor;
-    pageControl.pageIndicatorTintColor = self.indicatorTintColorUnselected;
     pageControl.userInteractionEnabled = NO;
     
     [self addSubview:scrollView];
@@ -227,12 +200,6 @@ typedef void(^DKCarouselViewTapBlock)(void);
     _indicatorTintColor = indicatorTintColor;
     
     self.pageControl.currentPageIndicatorTintColor = indicatorTintColor;
-}
-
-- (void)setIndicatorTintColorUnselected:(UIColor *)indicatorTintColorUnselected {
-    _indicatorTintColorUnselected = indicatorTintColorUnselected;
-    
-    self.pageControl.pageIndicatorTintColor = indicatorTintColorUnselected;
 }
 
 - (CGSize)indicatorSize {

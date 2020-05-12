@@ -10,7 +10,6 @@
 #endif
 #endif
 
-#import "DKCarousel.h"
 #import "DKCarouselView.h"
 
 FOUNDATION_EXPORT double DKCarouselViewVersionNumber;

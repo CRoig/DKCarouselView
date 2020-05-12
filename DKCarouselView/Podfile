@@ -3,11 +3,6 @@ platform :ios, '9.0'
 
 workspace 'DKCarouselView'
 
-target 'DKCarouselView' do
-  project 'DKCarouselView.xcodeproj'
-  pod 'SDWebImageFLPlugin', '~> 0.3.0'
-end
-
 target 'DKCarouselViewDemo' do
   project 'DKCarouselViewDemo/DKCarouselViewDemo.xcodeproj'
   pod 'DKCarouselView', '~> 1.4.12'

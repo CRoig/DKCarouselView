@@ -3,20 +3,17 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C1DD1FC564E95B70D90B6862 /* Pods_DKCarouselView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58C23AD9C2887D2CFF1CC378 /* Pods_DKCarouselView.framework */; };
 		D3379755224E5CD800FECA2C /* DKCarousel.h in Headers */ = {isa = PBXBuildFile; fileRef = D3379753224E5CD800FECA2C /* DKCarousel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D3379762224E5D0700FECA2C /* DKCarouselView.h in Headers */ = {isa = PBXBuildFile; fileRef = D337975C224E5D0700FECA2C /* DKCarouselView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D3379763224E5D0700FECA2C /* DKCarouselView.m in Sources */ = {isa = PBXBuildFile; fileRef = D3379761224E5D0700FECA2C /* DKCarouselView.m */; };
+		D33FFBE9246AC5CC00749777 /* SDWebImageFLPlugin in Frameworks */ = {isa = PBXBuildFile; productRef = D33FFBE8246AC5CC00749777 /* SDWebImageFLPlugin */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		19BBA7CEEC1540B8B5859BD2 /* Pods-DKCarouselView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DKCarouselView.release.xcconfig"; path = "Pods/Target Support Files/Pods-DKCarouselView/Pods-DKCarouselView.release.xcconfig"; sourceTree = "<group>"; };
-		58C23AD9C2887D2CFF1CC378 /* Pods_DKCarouselView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DKCarouselView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8046EC481C84FFE3DB977E68 /* Pods-DKCarouselView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DKCarouselView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DKCarouselView/Pods-DKCarouselView.debug.xcconfig"; sourceTree = "<group>"; };
 		D3379750224E5CD800FECA2C /* DKCarouselView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DKCarouselView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3379753224E5CD800FECA2C /* DKCarousel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKCarousel.h; sourceTree = "<group>"; };
 		D3379754224E5CD800FECA2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -29,29 +26,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C1DD1FC564E95B70D90B6862 /* Pods_DKCarouselView.framework in Frameworks */,
+				D33FFBE9246AC5CC00749777 /* SDWebImageFLPlugin in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		C233D762D1BC5EB333164F55 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				8046EC481C84FFE3DB977E68 /* Pods-DKCarouselView.debug.xcconfig */,
-				19BBA7CEEC1540B8B5859BD2 /* Pods-DKCarouselView.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		D3379746224E5CD800FECA2C = {
 			isa = PBXGroup;
 			children = (
 				D337975B224E5D0700FECA2C /* DKCarouselView */,
 				D3379751224E5CD800FECA2C /* Products */,
 				DE995186006EE044F8482CB3 /* Frameworks */,
-				C233D762D1BC5EB333164F55 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,7 +64,6 @@
 		DE995186006EE044F8482CB3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				58C23AD9C2887D2CFF1CC378 /* Pods_DKCarouselView.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -101,7 +87,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D3379758224E5CD800FECA2C /* Build configuration list for PBXNativeTarget "DKCarouselView" */;
 			buildPhases = (
-				204F6BBB6484E608995B25E4 /* [CP] Check Pods Manifest.lock */,
 				D337974B224E5CD800FECA2C /* Headers */,
 				D337974C224E5CD800FECA2C /* Sources */,
 				D337974D224E5CD800FECA2C /* Frameworks */,
@@ -112,6 +97,9 @@
 			dependencies = (
 			);
 			name = DKCarouselView;
+			packageProductDependencies = (
+				D33FFBE8246AC5CC00749777 /* SDWebImageFLPlugin */,
+			);
 			productName = DKCarousel;
 			productReference = D3379750224E5CD800FECA2C /* DKCarouselView.framework */;
 			productType = "com.apple.product-type.framework";
@@ -137,6 +125,9 @@
 				en,
 			);
 			mainGroup = D3379746224E5CD800FECA2C;
+			packageReferences = (
+				D33FFBE7246AC5CC00749777 /* XCRemoteSwiftPackageReference "SDWebImageFLPlugin" */,
+			);
 			productRefGroup = D3379751224E5CD800FECA2C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -155,31 +146,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		204F6BBB6484E608995B25E4 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-DKCarouselView-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D337974C224E5CD800FECA2C /* Sources */ = {
@@ -319,7 +285,6 @@
 		};
 		D3379759224E5CD800FECA2C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8046EC481C84FFE3DB977E68 /* Pods-DKCarouselView.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -344,7 +309,6 @@
 		};
 		D337975A224E5CD800FECA2C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 19BBA7CEEC1540B8B5859BD2 /* Pods-DKCarouselView.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -389,6 +353,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D33FFBE7246AC5CC00749777 /* XCRemoteSwiftPackageReference "SDWebImageFLPlugin" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/CRoig/SDWebImageFLPlugin";
+			requirement = {
+				branch = feature/SPMSupport;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D33FFBE8246AC5CC00749777 /* SDWebImageFLPlugin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D33FFBE7246AC5CC00749777 /* XCRemoteSwiftPackageReference "SDWebImageFLPlugin" */;
+			productName = SDWebImageFLPlugin;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D3379747224E5CD800FECA2C /* Project object */;
 }
